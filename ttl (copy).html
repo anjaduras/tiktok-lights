@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TTL</title>
+
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,400&display=swap');
+
+    body {
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
+        padding-top: 100px;
+        background-color:black;
+        color: rgb(88, 88, 88);
+        font-size: 25px;
+    }
+
+    .red {
+        background-color: red;
+        color: rgb(165, 0, 0);
+    }
+    .green {
+        background-color: rgb(106, 255, 47);
+        color:rgb(41, 146, 0);
+    }
+    .blue {
+        background-color: blue;
+        color: rgb(0, 0, 120);
+    }
+    .pink {
+        background-color: rgb(255, 0, 136);
+        color:rgb(153, 0, 82);
+    }
+
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+
+    button{padding: 15px;
+    border-radius: 20px;}
+</style>
+
+<body>
+    <h1>Tiktok Lights</h1>
+    <p>Choose the colour Lights for your video!</p>
+
+    <button onclick="red()" style="background-color: red;"> </button>
+    <button onclick="green()" style="background-color: rgb(106, 255, 47);"> </button>
+    <button onclick="blue()" style="background-color: blue;"> </button>
+    <button onclick="pink()" style="background-color: rgb(255, 0, 136)"> </button>
+
+    <script>
+        function red() {
+            var element = document.body;
+            element.classList.toggle("red");
+        }
+        function green() {
+            var element = document.body;
+            element.classList.toggle("green");
+        }
+        function blue() {
+            var element = document.body;
+            element.classList.toggle("blue");
+        }
+        function pink() {
+            var element = document.body;
+            element.classList.toggle("pink");
+        }
+    </script>
+</body>
+
+<!-- у мене вийшло, зо кнопки в порядку зліва-направо переключають кольори. також, якщо натиснути на ту саму кнопку ще раз, то колір змінюється на базовий- чорний. проблема тут така- коли ти пробуєш включати кнопки в попередньому напрямку, то вони або просто не включаються, або, що ще гірше, вони починають давати інші кольори. не рандомні, а сусідні (натискаєш рожевий-отримуєш синій, синій-зелений, зелений-червоний.) -->
+
+</html>
